@@ -43,13 +43,13 @@
   <main class="pt-14 sm:pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
     <h1 class="text-2xl sm:text-3xl font-bold text-sky-deep mb-6">生活优惠</h1>
 
-    <!-- 品类筛选 -->
-    <div class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
-      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-accent text-white text-sm font-medium shadow-sm">全部</a>
-      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">餐饮</a>
-      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">购物</a>
-      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">休闲</a>
-      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">其他</a>
+    <!-- 品类筛选：由 JS 绑定点击与高亮 -->
+    <div id="category-tabs" class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
+      <button type="button" class="category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm transition bg-accent text-white border border-accent" data-category="all">全部</button>
+      <button type="button" class="category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition" data-category="catering">餐饮</button>
+      <button type="button" class="category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition" data-category="shopping">购物</button>
+      <button type="button" class="category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition" data-category="leisure">休闲</button>
+      <button type="button" class="category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition" data-category="other">其他</button>
     </div>
 
     <!-- 本周推荐（精选横滑） -->
@@ -95,173 +95,8 @@
       </div>
     </div>
 
-    <!-- 餐饮 -->
-    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
-      <i data-lucide="utensils-crossed" class="w-4 h-4 text-accent"></i>
-      餐饮
-    </h2>
-    <div class="space-y-4 mb-8">
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="utensils-crossed" class="w-8 h-8 text-accent/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">学生专享午市套餐 8 折</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：校园东区食堂二楼 · 学苑餐厅</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-06-30
-            </p>
-          </div>
-        </div>
-      </article>
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="coffee" class="w-8 h-8 text-emerald-600/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">咖啡第二杯半价</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：图书馆一层 · 静读咖啡</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-07-15
-            </p>
-          </div>
-        </div>
-      </article>
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-amber-100 to-yellow-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="cookie" class="w-8 h-8 text-amber-600/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">奶茶买三送一</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：西区生活广场 · 茶语时光</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-08-20
-            </p>
-          </div>
-        </div>
-      </article>
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="pizza" class="w-8 h-8 text-rose-500/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">西餐厅学生套餐 7.5 折</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：校门外步行街 · 意式小厨</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-09-01
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <!-- 购物 -->
-    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
-      <i data-lucide="shopping-bag" class="w-4 h-4 text-accent"></i>
-      购物
-    </h2>
-    <div class="space-y-4 mb-8">
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="shopping-bag" class="w-8 h-8 text-rose-500/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">文具店满 30 减 5</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：校门口商业街 · 晨光文具</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-05-31
-            </p>
-          </div>
-        </div>
-      </article>
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="smartphone" class="w-8 h-8 text-blue-600/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">数码配件学生价 9 折</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：商业街 B 座 · 校园数码</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-07-31
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <!-- 休闲·其他 -->
-    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
-      <i data-lucide="smile" class="w-4 h-4 text-accent"></i>
-      休闲 · 其他
-    </h2>
-    <div class="space-y-4 mb-10">
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-violet-100 to-purple-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="scissors" class="w-8 h-8 text-violet-600/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">理发店学生价 9 折</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：西区生活广场 · 型格理发</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-08-31
-            </p>
-          </div>
-        </div>
-      </article>
-      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
-        <div class="flex gap-3">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-cyan-100 to-sky-50 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="dumbbell" class="w-8 h-8 text-cyan-600/80"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">健身房学生月卡 8 折</h2>
-            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
-              <span>商家地址：体育馆地下一层 · 活力健身</span>
-            </p>
-            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-              有效期至 2025-06-15
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
+    <!-- 优惠列表：由 JS 根据当前分类过滤并渲染 -->
+    <div id="discount-list" class="space-y-4 mb-10"></div>
 
     <!-- 使用说明 -->
     <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
@@ -290,6 +125,98 @@
     </div>
   </main>
 
+  <script>
+    // ---------- 优惠信息数据（JSON 数组） ----------
+    const DISCOUNTS_DATA = [
+      { id: 1, category: 'catering', title: '学生专享午市套餐 8 折', location: '校园东区食堂二楼 · 学苑餐厅', date: '2025-06-30', icon: 'utensils-crossed', iconBg: 'from-orange-100 to-amber-50' },
+      { id: 2, category: 'catering', title: '咖啡第二杯半价', location: '图书馆一层 · 静读咖啡', date: '2025-07-15', icon: 'coffee', iconBg: 'from-emerald-100 to-teal-50' },
+      { id: 3, category: 'catering', title: '奶茶买三送一', location: '西区生活广场 · 茶语时光', date: '2025-08-20', icon: 'cookie', iconBg: 'from-amber-100 to-yellow-50' },
+      { id: 4, category: 'catering', title: '西餐厅学生套餐 7.5 折', location: '校门外步行街 · 意式小厨', date: '2025-09-01', icon: 'pizza', iconBg: 'from-rose-100 to-pink-50' },
+      { id: 5, category: 'shopping', title: '文具店满 30 减 5', location: '校门口商业街 · 晨光文具', date: '2025-05-31', icon: 'shopping-bag', iconBg: 'from-rose-100 to-pink-50' },
+      { id: 6, category: 'shopping', title: '数码配件学生价 9 折', location: '商业街 B 座 · 校园数码', date: '2025-07-31', icon: 'smartphone', iconBg: 'from-blue-100 to-indigo-50' },
+      { id: 7, category: 'leisure', title: '理发店学生价 9 折', location: '西区生活广场 · 型格理发', date: '2025-08-31', icon: 'scissors', iconBg: 'from-violet-100 to-purple-50' },
+      { id: 8, category: 'leisure', title: '健身房学生月卡 8 折', location: '体育馆地下一层 · 活力健身', date: '2025-06-15', icon: 'dumbbell', iconBg: 'from-cyan-100 to-sky-50' },
+      { id: 9, category: 'other', title: '打印店学生价 8 折', location: '校门口 · 快印社', date: '2025-09-30', icon: 'file-text', iconBg: 'from-slate-100 to-slate-200' },
+    ];
+
+    // ---------- 状态：当前选中的分类（默认为 'all'） ----------
+    let currentCategory = 'all';
+
+    // ---------- 根据当前分类过滤列表 ----------
+    function getFilteredDiscounts() {
+      if (currentCategory === 'all') return DISCOUNTS_DATA;
+      return DISCOUNTS_DATA.filter(function (item) { return item.category === currentCategory; });
+    }
+
+    // ---------- 为选中的分类按钮添加高亮（橙色底+白字），其余为默认样式 ----------
+    function syncCategoryButtons() {
+      var tabs = document.querySelectorAll('.category-tab');
+      tabs.forEach(function (btn) {
+        var cat = btn.getAttribute('data-category');
+        if (cat === currentCategory) {
+          btn.className = 'category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm transition bg-accent text-white border border-accent';
+        } else {
+          btn.className = 'category-tab flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition';
+        }
+      });
+    }
+
+    // ---------- 渲染下方列表区（仅显示当前分类匹配的条目） ----------
+    function renderDiscountList() {
+      var container = document.getElementById('discount-list');
+      var list = getFilteredDiscounts();
+      if (!container) return;
+      if (list.length === 0) {
+        container.innerHTML = '<p class="text-center text-slate-500 py-8">暂无该分类下的优惠</p>';
+        return;
+      }
+      container.innerHTML = list.map(function (item) {
+        var bg = item.iconBg || 'from-slate-100 to-slate-200';
+        return (
+          '<article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">' +
+            '<div class="flex gap-3">' +
+              '<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ' + bg + ' flex items-center justify-center flex-shrink-0">' +
+                '<i data-lucide="' + item.icon + '" class="w-8 h-8 text-slate-600"></i>' +
+              '</div>' +
+              '<div class="flex-1 min-w-0">' +
+                '<h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">' + escapeHtml(item.title) + '</h2>' +
+                '<p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">' +
+                  '<i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>' +
+                  '<span>商家地址：' + escapeHtml(item.location) + '</span>' +
+                '</p>' +
+                '<p class="text-xs text-accent font-medium flex items-center gap-1.5">' +
+                  '<i data-lucide="calendar" class="w-3.5 h-3.5"></i>' +
+                  '有效期至 ' + escapeHtml(item.date) +
+                '</p>' +
+              '</div>' +
+            '</div>' +
+          '</article>'
+        );
+      }).join('');
+      if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+    }
+
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // ---------- 初始化：绑定分类按钮点击，并首次渲染 ----------
+    (function () {
+      document.getElementById('category-tabs').addEventListener('click', function (e) {
+        var btn = e.target.closest('.category-tab');
+        if (!btn) return;
+        var cat = btn.getAttribute('data-category');
+        if (!cat) return;
+        currentCategory = cat;
+        syncCategoryButtons();
+        renderDiscountList();
+      });
+      syncCategoryButtons();
+      renderDiscountList();
+    })();
+  </script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

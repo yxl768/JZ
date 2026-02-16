@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生活优惠 - 惊蛰校园综合生活服务平台</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'sky-deep': '#1e3a8a', 'accent': '#f97316', },
+          fontFamily: { sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'], },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    .page-bg { background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%); min-height: 100vh; }
+    .logo-text { text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(30, 58, 138, 0.12); }
+  </style>
+</head>
+<body class="page-bg antialiased font-sans text-gray-800">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/80 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+          <span class="logo-text text-xl sm:text-2xl font-bold text-sky-deep tracking-tight">惊蛰</span>
+          <span class="hidden sm:inline text-slate-500 text-sm font-normal">校园综合生活服务平台</span>
+        </a>
+        <div class="flex items-center gap-1 sm:gap-4">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">首页</a>
+          <a href="life-discounts.html" class="px-3 py-2 rounded-xl text-sm font-medium text-sky-deep bg-slate-100">生活优惠</a>
+          <a href="work-study.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">勤工俭学</a>
+          <a href="merchant.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">商家合作</a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">联系</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-14 sm:pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-sky-deep mb-6">生活优惠</h1>
+
+    <!-- 品类筛选 -->
+    <div class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
+      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-accent text-white text-sm font-medium shadow-sm">全部</a>
+      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">餐饮</a>
+      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">购物</a>
+      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">休闲</a>
+      <a href="#" class="flex-shrink-0 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-600 text-sm font-medium shadow-sm hover:bg-slate-50 transition">其他</a>
+    </div>
+
+    <!-- 本周推荐（精选横滑） -->
+    <div class="mt-6 mb-8">
+      <h2 class="text-base sm:text-lg font-bold text-sky-deep mb-3 flex items-center gap-2">
+        <i data-lucide="star" class="w-4 h-4 text-accent"></i>
+        本周推荐
+      </h2>
+      <div class="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <a href="life-discounts.html" class="flex-shrink-0 w-[200px] rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 transition-shadow hover:shadow-md">
+          <div class="flex gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center">
+              <i data-lucide="coffee" class="w-6 h-6 text-accent/80"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="font-medium text-slate-800 text-sm truncate">早餐暖心套餐 ¥9.9</p>
+              <p class="text-xs text-slate-500 mt-0.5">学苑餐厅 · 至 06-30</p>
+            </div>
+          </div>
+        </a>
+        <a href="life-discounts.html" class="flex-shrink-0 w-[200px] rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 transition-shadow hover:shadow-md">
+          <div class="flex gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center">
+              <i data-lucide="utensils-crossed" class="w-6 h-6 text-rose-500/80"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="font-medium text-slate-800 text-sm truncate">午市双人餐 ¥29.9</p>
+              <p class="text-xs text-slate-500 mt-0.5">东区食堂 · 至 06-30</p>
+            </div>
+          </div>
+        </a>
+        <a href="life-discounts.html" class="flex-shrink-0 w-[200px] rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 transition-shadow hover:shadow-md">
+          <div class="flex gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-50 flex items-center justify-center">
+              <i data-lucide="salad" class="w-6 h-6 text-emerald-600/80"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="font-medium text-slate-800 text-sm truncate">轻食能量碗 ¥15.8</p>
+              <p class="text-xs text-slate-500 mt-0.5">静读咖啡 · 至 07-15</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 餐饮 -->
+    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
+      <i data-lucide="utensils-crossed" class="w-4 h-4 text-accent"></i>
+      餐饮
+    </h2>
+    <div class="space-y-4 mb-8">
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="utensils-crossed" class="w-8 h-8 text-accent/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">学生专享午市套餐 8 折</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：校园东区食堂二楼 · 学苑餐厅</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-06-30
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="coffee" class="w-8 h-8 text-emerald-600/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">咖啡第二杯半价</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：图书馆一层 · 静读咖啡</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-07-15
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-amber-100 to-yellow-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="cookie" class="w-8 h-8 text-amber-600/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">奶茶买三送一</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：西区生活广场 · 茶语时光</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-08-20
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="pizza" class="w-8 h-8 text-rose-500/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">西餐厅学生套餐 7.5 折</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：校门外步行街 · 意式小厨</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-09-01
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- 购物 -->
+    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
+      <i data-lucide="shopping-bag" class="w-4 h-4 text-accent"></i>
+      购物
+    </h2>
+    <div class="space-y-4 mb-8">
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="shopping-bag" class="w-8 h-8 text-rose-500/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">文具店满 30 减 5</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：校门口商业街 · 晨光文具</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-05-31
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="smartphone" class="w-8 h-8 text-blue-600/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">数码配件学生价 9 折</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：商业街 B 座 · 校园数码</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-07-31
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- 休闲·其他 -->
+    <h2 class="text-base font-bold text-sky-deep mb-3 flex items-center gap-2">
+      <i data-lucide="smile" class="w-4 h-4 text-accent"></i>
+      休闲 · 其他
+    </h2>
+    <div class="space-y-4 mb-10">
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-violet-100 to-purple-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="scissors" class="w-8 h-8 text-violet-600/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">理发店学生价 9 折</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：西区生活广场 · 型格理发</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-08-31
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 transition-shadow hover:shadow-md">
+        <div class="flex gap-3">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-cyan-100 to-sky-50 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="dumbbell" class="w-8 h-8 text-cyan-600/80"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">健身房学生月卡 8 折</h2>
+            <p class="text-sm text-slate-600 flex items-center gap-1.5 mb-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+              <span>商家地址：体育馆地下一层 · 活力健身</span>
+            </p>
+            <p class="text-xs text-accent font-medium flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              有效期至 2025-06-15
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- 使用说明 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
+      <h2 class="text-base font-bold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="help-circle" class="w-4 h-4 text-accent"></i>
+        使用说明
+      </h2>
+      <ul class="space-y-3 text-sm text-slate-600">
+        <li class="flex gap-2">
+          <span class="text-accent font-medium shrink-0">1.</span>
+          <span>到店后向店员出示惊蛰 App 内「我的优惠」中的对应券码即可核销。</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-accent font-medium shrink-0">2.</span>
+          <span>部分优惠需与商家确认使用时段（如午市/晚市），请以商家现场规则为准。</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-accent font-medium shrink-0">3.</span>
+          <span>每笔订单仅可使用一张同类型优惠，不可与其他平台活动叠加（商家另有说明除外）。</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-accent font-medium shrink-0">4.</span>
+          <span>如有纠纷或券码无法使用，请联系<a href="contact.html" class="text-accent underline">客服</a>处理。</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

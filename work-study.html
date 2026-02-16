@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>勤工俭学 - 惊蛰校园综合生活服务平台</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'sky-deep': '#1e3a8a', 'accent': '#f97316', },
+          fontFamily: { sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'], },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    .page-bg { background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%); min-height: 100vh; }
+    .logo-text { text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(30, 58, 138, 0.12); }
+  </style>
+</head>
+<body class="page-bg antialiased font-sans text-gray-800">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/80 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+          <span class="logo-text text-xl sm:text-2xl font-bold text-sky-deep tracking-tight">惊蛰</span>
+          <span class="hidden sm:inline text-slate-500 text-sm font-normal">校园综合生活服务平台</span>
+        </a>
+        <div class="flex items-center gap-1 sm:gap-4">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">首页</a>
+          <a href="life-discounts.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">生活优惠</a>
+          <a href="work-study.html" class="px-3 py-2 rounded-xl text-sm font-medium text-sky-deep bg-slate-100">勤工俭学</a>
+          <a href="merchant.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">商家合作</a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">联系</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-14 sm:pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-sky-deep mb-6">勤工俭学</h1>
+
+    <!-- 会员权益文案 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-6 mb-8 bg-gradient-to-r from-amber-50/80 to-orange-50/50 border-accent/20">
+      <div class="flex items-start gap-3">
+        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-white flex-shrink-0">
+          <i data-lucide="crown" class="w-5 h-5"></i>
+        </span>
+        <div>
+          <h2 class="text-base sm:text-lg font-semibold text-sky-deep mb-1">会员权益</h2>
+          <p class="text-sm text-slate-700">
+            家教年费 <span class="text-accent font-bold text-lg">398 元</span>，精准匹配学员与家长，全程保障；兼职实习信息实时更新，先到先得。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分栏：家教 | 兼职实习 -->
+    <div class="grid sm:grid-cols-2 gap-6 sm:gap-8">
+      <!-- 家教 -->
+      <section class="rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden">
+        <div class="p-4 sm:p-5 border-b border-slate-100 bg-slate-50/50">
+          <div class="flex items-center gap-2">
+            <span class="flex items-center justify-center w-10 h-10 rounded-2xl bg-blue-50 text-blue-600">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </span>
+            <h2 class="text-lg font-semibold text-sky-deep">家教</h2>
+          </div>
+        </div>
+        <div class="p-4 sm:p-5 space-y-3">
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">小学英语 · 周末辅导</p>
+            <p class="text-sm text-slate-500 mt-0.5">80 元/时 · 海淀区 · 需会员</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">初中数学 · 长期</p>
+            <p class="text-sm text-slate-500 mt-0.5">120 元/时 · 朝阳区</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">高中物理 · 冲刺班</p>
+            <p class="text-sm text-slate-500 mt-0.5">150 元/时 · 西城区</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">小学语文 · 阅读写作</p>
+            <p class="text-sm text-slate-500 mt-0.5">75 元/时 · 丰台区</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">初中化学 · 周末</p>
+            <p class="text-sm text-slate-500 mt-0.5">110 元/时 · 海淀区</p>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 mt-2 text-sm font-medium text-accent">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            查看更多
+          </a>
+        </div>
+      </section>
+
+      <!-- 兼职实习 -->
+      <section class="rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden">
+        <div class="p-4 sm:p-5 border-b border-slate-100 bg-slate-50/50">
+          <div class="flex items-center gap-2">
+            <span class="flex items-center justify-center w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </span>
+            <h2 class="text-lg font-semibold text-sky-deep">兼职实习</h2>
+          </div>
+        </div>
+        <div class="p-4 sm:p-5 space-y-3">
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">校园活动助理</p>
+            <p class="text-sm text-slate-500 mt-0.5">日薪 200 · 校内 · 可申请</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">新媒体运营实习</p>
+            <p class="text-sm text-slate-500 mt-0.5">实习岗 · 可转正</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">展会兼职</p>
+            <p class="text-sm text-slate-500 mt-0.5">周末 · 260/天</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">图书馆助理</p>
+            <p class="text-sm text-slate-500 mt-0.5">时薪 25 · 校内长期</p>
+          </a>
+          <a href="contact.html" class="block p-3 rounded-xl border border-slate-200/60 hover:bg-slate-50 transition">
+            <p class="font-medium text-slate-800">问卷调研员</p>
+            <p class="text-sm text-slate-500 mt-0.5">单次 80–150 · 灵活</p>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 mt-2 text-sm font-medium text-accent">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            查看更多
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 申请流程 -->
+    <div class="mt-8 sm:mt-10 rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
+      <h2 class="text-base font-bold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-4 h-4 text-accent"></i>
+        申请流程
+      </h2>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">1</span>
+          <p class="text-sm font-medium text-slate-800">注册 / 登录</p>
+          <p class="text-xs text-slate-500 mt-0.5">惊蛰账号</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">2</span>
+          <p class="text-sm font-medium text-slate-800">填写信息</p>
+          <p class="text-xs text-slate-500 mt-0.5">学科/意向岗位</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">3</span>
+          <p class="text-sm font-medium text-slate-800">审核匹配</p>
+          <p class="text-xs text-slate-500 mt-0.5">1–3 工作日</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-accent text-white font-bold flex items-center justify-center mb-2">4</span>
+          <p class="text-sm font-medium text-slate-800">签约 / 上岗</p>
+          <p class="text-xs text-slate-500 mt-0.5">联系确认</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 常见问题 -->
+    <div class="mt-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
+      <h2 class="text-base font-bold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="help-circle" class="w-4 h-4 text-accent"></i>
+        常见问题
+      </h2>
+      <div class="space-y-4">
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">家教会员 398 元包含哪些服务？</p>
+          <p class="text-sm text-slate-600 mt-1">含一年内不限次需求发布、精准匹配推荐、合同模板与纠纷协调；不包含具体课时费，课时费由您与家长协商。</p>
+        </div>
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">兼职信息多久更新？</p>
+          <p class="text-sm text-slate-600 mt-1">兼职与实习岗位每日更新，先到先得。建议开通消息提醒以便及时申请。</p>
+        </div>
+        <div>
+          <p class="font-medium text-slate-800 text-sm">如何联系客服咨询？</p>
+          <p class="text-sm text-slate-600 mt-1">请前往<a href="contact.html" class="text-accent underline">联系我们</a>页面，选择「家教/兼职咨询」或「客服咨询」。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

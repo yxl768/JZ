@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>惊蛰 - 校园综合生活服务平台</title>
+  <meta name="description" content="让校园生活更便捷、更省钱、更精彩" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sky-deep': '#1e3a8a',
+            'accent': '#f97316',
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    /* 天空蓝到纯白渐变 - 年轻化、呼吸感 */
+    .hero-gradient {
+      background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 25%, #f0f9ff 55%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    /* 顶部云朵装饰 - 呼吸感 */
+    .hero-gradient::before,
+    .hero-gradient::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
+    .hero-gradient::before {
+      width: 280px;
+      height: 120px;
+      top: 8%;
+      left: -8%;
+      box-shadow: 160px 40px 0 0 rgba(255, 255, 255, 0.4),
+                  320px 80px 0 -20px rgba(255, 255, 255, 0.35);
+    }
+    .hero-gradient::after {
+      width: 200px;
+      height: 90px;
+      top: 15%;
+      right: -5%;
+      box-shadow: -120px 30px 0 0 rgba(255, 255, 255, 0.4);
+    }
+    .page-bg {
+      background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+      min-height: 100vh;
+    }
+    /* 惊蛰标题轮廓感 */
+    .logo-text {
+      text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(30, 58, 138, 0.15);
+    }
+    /* 横向滚动区 */
+    .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+    }
+    .overflow-x-auto::-webkit-scrollbar {
+      height: 4px;
+    }
+    .overflow-x-auto::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="page-bg antialiased font-sans text-gray-800">
+  <!-- 顶部固定导航栏 -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/80 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <!-- Logo 左侧 -->
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+          <span class="logo-text text-xl sm:text-2xl font-bold text-sky-deep tracking-tight">惊蛰</span>
+          <span class="hidden sm:inline text-slate-500 text-sm font-normal">校园综合生活服务平台</span>
+        </a>
+        <!-- 菜单 右侧 -->
+        <div class="flex items-center gap-1 sm:gap-4">
+          <a href="index.html#home" class="px-3 py-2 rounded-xl text-sm font-medium text-sky-deep hover:bg-slate-100 transition">首页</a>
+          <a href="life-discounts.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">生活优惠</a>
+          <a href="work-study.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">勤工俭学</a>
+          <a href="merchant.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">商家合作</a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">联系</a>
+          <button type="button" class="sm:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100" aria-label="打开菜单">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 首屏 Hero 区 -->
+  <main id="home" class="hero-gradient pt-14 sm:pt-16">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 min-h-[70vh] flex flex-col justify-center">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-sky-deep leading-tight mb-4 sm:mb-6" style="text-shadow: 0 1px 0 rgba(255,255,255,0.6), 0 2px 8px rgba(30,58,138,0.08);">
+          让校园生活更便捷、更省钱、更精彩
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 mb-8 sm:mb-10 leading-relaxed">
+          一站式校园服务，从生活到学习，<span class="text-accent font-semibold">惊蛰</span>与你同行。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="#entry" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-accent text-white font-medium shadow-sm hover:opacity-90 transition">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            探索服务
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sky-deep font-medium shadow-sm hover:bg-slate-50 transition">
+            <i data-lucide="info" class="w-4 h-4"></i>
+            了解更多
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心入口区 -->
+    <section id="entry" class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
+      <!-- 胶囊搜索栏：概念图风格，右侧橙色 20r 标签 -->
+      <div class="flex items-center gap-2 mb-6 sm:mb-8">
+        <div class="flex-1 flex items-center rounded-full bg-white/95 border border-sky-100 shadow-sm overflow-hidden">
+          <span class="pl-4 sm:pl-5 text-slate-400">
+            <i data-lucide="search" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </span>
+          <input type="search" placeholder="搜索校内优惠、兼职、活动…" class="flex-1 py-3 sm:py-3.5 pl-2 pr-3 text-sm sm:text-base text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:ring-0 focus:outline-none" />
+          <span class="pr-2 sm:pr-3 py-1.5">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full border-2 border-accent bg-accent text-white text-xs font-semibold">20r</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 三大板块卡片：复刻概念图 - 白底 / 浅蓝底白字 / 浅紫底白字 -->
+      <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10">
+        <a href="life-discounts.html" class="entry-card group flex flex-col items-center justify-center rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-6 transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+          <span class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-50 text-red-500 mb-2 sm:mb-3 group-hover:bg-red-100 transition-colors">
+            <i data-lucide="shopping-bag" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+          </span>
+          <span class="text-xs sm:text-sm font-medium text-slate-800">生活优惠</span>
+        </a>
+        <a href="work-study.html" class="entry-card group flex flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 to-sky-300 border border-sky-300/80 shadow-sm p-4 sm:p-6 transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+          <span class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/95 text-sky-600 mb-2 sm:mb-3 group-hover:bg-white transition-colors">
+            <i data-lucide="file-text" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+          </span>
+          <span class="text-xs sm:text-sm font-medium text-white drop-shadow-sm">勤工俭学</span>
+        </a>
+        <a href="index.html#entry" class="entry-card group flex flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-violet-400 to-violet-300 border border-violet-300/80 shadow-sm p-4 sm:p-6 transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+          <span class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/95 text-violet-600 mb-2 sm:mb-3 group-hover:bg-white transition-colors">
+            <i data-lucide="party-popper" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+          </span>
+          <span class="text-xs sm:text-sm font-medium text-white drop-shadow-sm">专属活动</span>
+        </a>
+      </div>
+
+      <!-- 热能优惠套餐 - 横向滚动，概念图深蓝标题 -->
+      <div>
+        <h2 class="text-base sm:text-lg font-bold text-sky-deep mb-3 sm:mb-4">热能优惠套餐</h2>
+        <div class="flex gap-3 sm:gap-4 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <a href="life-discounts.html" class="deal-card flex-shrink-0 w-[160px] sm:w-[180px] rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+            <div class="aspect-[4/3] bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center">
+              <i data-lucide="coffee" class="w-10 h-10 text-accent/80"></i>
+            </div>
+            <div class="p-3 sm:p-4">
+              <h3 class="text-sm font-medium text-slate-800 truncate mb-1">早餐暖心套餐</h3>
+              <p class="text-accent font-semibold text-sm">¥9.9</p>
+            </div>
+          </a>
+          <a href="life-discounts.html" class="deal-card flex-shrink-0 w-[160px] sm:w-[180px] rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+            <div class="aspect-[4/3] bg-gradient-to-br from-rose-100 to-pink-50 flex items-center justify-center">
+              <i data-lucide="utensils-crossed" class="w-10 h-10 text-rose-500/80"></i>
+            </div>
+            <div class="p-3 sm:p-4">
+              <h3 class="text-sm font-medium text-slate-800 truncate mb-1">午市双人餐</h3>
+              <p class="text-accent font-semibold text-sm">¥29.9</p>
+            </div>
+          </a>
+          <a href="life-discounts.html" class="deal-card flex-shrink-0 w-[160px] sm:w-[180px] rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+            <div class="aspect-[4/3] bg-gradient-to-br from-emerald-100 to-teal-50 flex items-center justify-center">
+              <i data-lucide="salad" class="w-10 h-10 text-emerald-600/80"></i>
+            </div>
+            <div class="p-3 sm:p-4">
+              <h3 class="text-sm font-medium text-slate-800 truncate mb-1">轻食能量碗</h3>
+              <p class="text-accent font-semibold text-sm">¥15.8</p>
+            </div>
+          </a>
+          <a href="life-discounts.html" class="deal-card flex-shrink-0 w-[160px] sm:w-[180px] rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden transition-transform duration-200 hover:scale-105 active:scale-105 touch-manipulation">
+            <div class="aspect-[4/3] bg-gradient-to-br from-amber-100 to-yellow-50 flex items-center justify-center">
+              <i data-lucide="cookie" class="w-10 h-10 text-amber-600/80"></i>
+            </div>
+            <div class="p-3 sm:p-4">
+              <h3 class="text-sm font-medium text-slate-800 truncate mb-1">下午茶组合</h3>
+              <p class="text-accent font-semibold text-sm">¥12.8</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 热门活动 / 更多服务 -->
+      <div class="mt-10">
+        <h2 class="text-base sm:text-lg font-bold text-sky-deep mb-3 sm:mb-4">热门活动</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="index.html#entry" class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 flex gap-4 transition-shadow hover:shadow-md">
+            <span class="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center shrink-0">
+              <i data-lucide="party-popper" class="w-6 h-6 text-violet-600"></i>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-semibold text-sky-deep text-sm sm:text-base">毕业季 · 校园留念</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">合影、纪念品合作商家专享价，至 6 月底</p>
+            </div>
+          </a>
+          <a href="work-study.html" class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 flex gap-4 transition-shadow hover:shadow-md">
+            <span class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
+              <i data-lucide="briefcase" class="w-6 h-6 text-blue-600"></i>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-semibold text-sky-deep text-sm sm:text-base">暑期兼职专场</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">实习、短期兼职集中发布，先到先得</p>
+            </div>
+          </a>
+          <a href="life-discounts.html" class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-4 sm:p-5 flex gap-4 transition-shadow hover:shadow-md">
+            <span class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center shrink-0">
+              <i data-lucide="tag" class="w-6 h-6 text-accent"></i>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-semibold text-sky-deep text-sm sm:text-base">新生专享礼包</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">凭录取通知可领多张优惠券，长期有效</p>
+            </div>
+          </a>
+        </div>
+        <div class="mt-4 text-center">
+          <a href="contact.html" class="inline-flex items-center gap-2 text-sm font-medium text-accent">
+            更多活动与客服咨询
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

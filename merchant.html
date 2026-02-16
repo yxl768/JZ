@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商家合作 - 惊蛰校园综合生活服务平台</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'sky-deep': '#1e3a8a', 'accent': '#f97316', },
+          fontFamily: { sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'], },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    .page-bg { background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%); min-height: 100vh; }
+    .logo-text { text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(30, 58, 138, 0.12); }
+  </style>
+</head>
+<body class="page-bg antialiased font-sans text-gray-800">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/80 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+          <span class="logo-text text-xl sm:text-2xl font-bold text-sky-deep tracking-tight">惊蛰</span>
+          <span class="hidden sm:inline text-slate-500 text-sm font-normal">校园综合生活服务平台</span>
+        </a>
+        <div class="flex items-center gap-1 sm:gap-4">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">首页</a>
+          <a href="life-discounts.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">生活优惠</a>
+          <a href="work-study.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">勤工俭学</a>
+          <a href="merchant.html" class="px-3 py-2 rounded-xl text-sm font-medium text-sky-deep bg-slate-100">商家合作</a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">联系</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-14 sm:pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-sky-deep mb-2">商家合作</h1>
+    <p class="text-slate-600 mb-8">携手惊蛰，触达校园年轻消费群体。</p>
+
+    <!-- 合作类型：图标 + 简洁文字 -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10">
+      <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 flex items-start gap-4">
+        <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-accent/10 text-accent flex-shrink-0">
+          <i data-lucide="store" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="font-semibold text-sky-deep mb-1">优惠入驻</h2>
+          <p class="text-sm text-slate-600">发布学生专享优惠，吸引到店消费，提升复购。</p>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 flex items-start gap-4">
+        <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-sky-deep/10 text-sky-deep flex-shrink-0">
+          <i data-lucide="megaphone" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="font-semibold text-sky-deep mb-1">地推赞助</h2>
+          <p class="text-sm text-slate-600">校园地推、活动赞助，品牌直达学生群体。</p>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 flex items-start gap-4 sm:col-span-2 lg:col-span-1">
+        <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex-shrink-0">
+          <i data-lucide="handshake" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="font-semibold text-sky-deep mb-1">联合活动</h2>
+          <p class="text-sm text-slate-600">节日联名、专场活动，定制化合作方案。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 合作流程 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6 mb-8">
+      <h2 class="text-lg font-semibold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="git-branch" class="w-5 h-5 text-accent"></i>
+        合作流程
+      </h2>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">1</span>
+          <p class="text-sm font-medium text-slate-800">提交意向</p>
+          <p class="text-xs text-slate-500 mt-0.5">邮件/电话/企业微信</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">2</span>
+          <p class="text-sm font-medium text-slate-800">方案沟通</p>
+          <p class="text-xs text-slate-500 mt-0.5">入驻形式与权益</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-deep font-bold flex items-center justify-center mb-2">3</span>
+          <p class="text-sm font-medium text-slate-800">签约入驻</p>
+          <p class="text-xs text-slate-500 mt-0.5">协议与素材提交</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="w-10 h-10 rounded-full bg-accent text-white font-bold flex items-center justify-center mb-2">4</span>
+          <p class="text-sm font-medium text-slate-800">上线推广</p>
+          <p class="text-xs text-slate-500 mt-0.5">优惠/活动展示</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 入驻商家展示 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6 mb-8">
+      <h2 class="text-lg font-semibold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="award" class="w-5 h-5 text-accent"></i>
+        入驻商家展示
+      </h2>
+      <p class="text-sm text-slate-600 mb-4">以下为已合作商家示例（展示型），排名不分先后。</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200/60 p-4 text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center mx-auto mb-2">
+            <i data-lucide="utensils-crossed" class="w-6 h-6 text-accent"></i>
+          </div>
+          <p class="text-sm font-medium text-slate-800">学苑餐厅</p>
+          <p class="text-xs text-slate-500">餐饮 · 学生套餐</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200/60 p-4 text-center">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center mx-auto mb-2">
+            <i data-lucide="shopping-bag" class="w-6 h-6 text-rose-500"></i>
+          </div>
+          <p class="text-sm font-medium text-slate-800">晨光文具</p>
+          <p class="text-xs text-slate-500">购物 · 满减</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200/60 p-4 text-center">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-2">
+            <i data-lucide="coffee" class="w-6 h-6 text-emerald-600"></i>
+          </div>
+          <p class="text-sm font-medium text-slate-800">静读咖啡</p>
+          <p class="text-xs text-slate-500">餐饮 · 第二杯半价</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200/60 p-4 text-center">
+          <div class="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center mx-auto mb-2">
+            <i data-lucide="scissors" class="w-6 h-6 text-violet-600"></i>
+          </div>
+          <p class="text-sm font-medium text-slate-800">型格理发</p>
+          <p class="text-xs text-slate-500">休闲 · 学生价</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 合作权益说明 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6 mb-8">
+      <h2 class="text-lg font-semibold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="gift" class="w-5 h-5 text-accent"></i>
+        合作权益说明
+      </h2>
+      <ul class="space-y-3 text-sm text-slate-600">
+        <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> 惊蛰平台内专属优惠展示位，触达本校及周边高校学生。</li>
+        <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> 可选地推/活动赞助合作，获得线下曝光与品牌联动。</li>
+        <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> 数据反馈：核销数据与效果汇总（根据合作档位提供）。</li>
+        <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> 签约后提供运营对接与素材规范说明，上线周期约 3–5 个工作日。</li>
+      </ul>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-6 sm:p-8 mb-8">
+      <h2 class="text-lg font-semibold text-sky-deep mb-4">联系方式</h2>
+      <p class="text-sm text-slate-600 mb-6">欢迎洽谈合作，我们会在 1–2 个工作日内回复。</p>
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <p class="text-xs text-slate-500">商务邮箱</p>
+            <a href="mailto:business@jingzhe-campus.com" class="text-sky-deep font-medium">business@jingzhe-campus.com</a>
+          </div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <p class="text-xs text-slate-500">合作热线</p>
+            <a href="tel:400-888-8888" class="text-sky-deep font-medium">400-888-8888</a>
+          </div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <p class="text-xs text-slate-500">企业微信</p>
+            <span class="text-slate-700">扫码添加「惊蛰商务」</span>
+          </div>
+        </li>
+      </ul>
+      <a href="contact.html" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-2xl bg-accent text-white text-sm font-medium shadow-sm hover:opacity-90 transition">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        前往联系我们
+      </a>
+    </div>
+
+    <!-- 常见问题 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
+      <h2 class="text-base font-bold text-sky-deep mb-4 flex items-center gap-2">
+        <i data-lucide="help-circle" class="w-4 h-4 text-accent"></i>
+        常见问题
+      </h2>
+      <div class="space-y-4">
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">入驻是否收费？</p>
+          <p class="text-sm text-slate-600 mt-1">根据合作形式（仅展示 / 地推 / 联合活动）有不同的合作方案，具体费用与权益在沟通时一并说明。</p>
+        </div>
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">从提交意向到上线需要多久？</p>
+          <p class="text-sm text-slate-600 mt-1">常规优惠入驻从签约到上线约 3–5 个工作日；涉及地推或活动的，根据排期另行约定。</p>
+        </div>
+        <div>
+          <p class="font-medium text-slate-800 text-sm">可以只做单次活动吗？</p>
+          <p class="text-sm text-slate-600 mt-1">可以。我们支持单次活动合作（如毕业季、开学季），无需长期入驻，详情可邮件或电话咨询。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

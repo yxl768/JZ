@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系我们 - 惊蛰校园综合生活服务平台</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'sky-deep': '#1e3a8a', 'accent': '#f97316', },
+          fontFamily: { sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'], },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    .page-bg { background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%); min-height: 100vh; }
+    .logo-text { text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(30, 58, 138, 0.12); }
+  </style>
+</head>
+<body class="page-bg antialiased font-sans text-gray-800">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/80 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+          <span class="logo-text text-xl sm:text-2xl font-bold text-sky-deep tracking-tight">惊蛰</span>
+          <span class="hidden sm:inline text-slate-500 text-sm font-normal">校园综合生活服务平台</span>
+        </a>
+        <div class="flex items-center gap-1 sm:gap-4">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">首页</a>
+          <a href="life-discounts.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">生活优惠</a>
+          <a href="work-study.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">勤工俭学</a>
+          <a href="merchant.html" class="hidden sm:inline px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-deep hover:bg-slate-100 transition">商家合作</a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl text-sm font-medium text-sky-deep bg-slate-100">联系</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-14 sm:pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-sky-deep mb-2">联系我们</h1>
+    <p class="text-slate-600 mb-8">根据您的身份选择对应渠道，我们会尽快回复。</p>
+
+    <!-- 办公时间与地址 -->
+    <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6 mb-8">
+      <h2 class="flex items-center gap-2 text-base font-bold text-sky-deep mb-4">
+        <i data-lucide="clock" class="w-4 h-4 text-accent"></i>
+        办公时间与地址
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="flex gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600 shrink-0">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <p class="font-medium text-slate-800">客服与商务</p>
+            <p class="text-slate-600 mt-0.5">工作日 9:00–18:00（法定节假日除外）</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600 shrink-0">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <p class="font-medium text-slate-800">办公地址</p>
+            <p class="text-slate-600 mt-0.5">北京市海淀区 XX 路 XX 号 XX 大厦 X 层（仅预约来访）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 学生咨询 -->
+    <section class="mb-8">
+      <h2 class="flex items-center gap-2 text-lg font-semibold text-sky-deep mb-4">
+        <span class="flex items-center justify-center w-8 h-8 rounded-xl bg-blue-50 text-blue-600">
+          <i data-lucide="user" class="w-4 h-4"></i>
+        </span>
+        学生咨询
+      </h2>
+      <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden">
+        <ul class="divide-y divide-slate-100">
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">客服咨询</p>
+                <p class="text-sm text-slate-500">优惠使用、账号问题、活动咨询</p>
+              </div>
+            </div>
+            <a href="#" class="text-accent font-medium text-sm whitespace-nowrap">进入咨询</a>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">家教 / 兼职咨询</p>
+                <p class="text-sm text-slate-500">报名、会员、匹配进度</p>
+              </div>
+            </div>
+            <a href="work-study.html" class="text-accent font-medium text-sm whitespace-nowrap">前往勤工俭学</a>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">学生邮箱</p>
+                <p class="text-sm text-slate-500">建议与反馈</p>
+              </div>
+            </div>
+            <a href="mailto:student@jingzhe-campus.com" class="text-sky-deep font-medium text-sm whitespace-nowrap">student@jingzhe-campus.com</a>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="smartphone" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">微信公众号</p>
+                <p class="text-sm text-slate-500">搜索「惊蛰校园」获取推送与活动</p>
+              </div>
+            </div>
+            <span class="text-slate-500 text-sm whitespace-nowrap">扫码关注</span>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">学生交流 QQ 群</p>
+                <p class="text-sm text-slate-500">群号 123456789 · 互助与反馈</p>
+              </div>
+            </div>
+            <span class="text-slate-500 text-sm whitespace-nowrap">加群咨询</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 商家合作 -->
+    <section>
+      <h2 class="flex items-center gap-2 text-lg font-semibold text-sky-deep mb-4">
+        <span class="flex items-center justify-center w-8 h-8 rounded-xl bg-accent/10 text-accent">
+          <i data-lucide="store" class="w-4 h-4"></i>
+        </span>
+        商家合作
+      </h2>
+      <div class="rounded-2xl bg-white border border-slate-200/60 shadow-sm overflow-hidden">
+        <ul class="divide-y divide-slate-100">
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">商务邮箱</p>
+                <p class="text-sm text-slate-500">入驻、地推、联合活动</p>
+              </div>
+            </div>
+            <a href="mailto:business@jingzhe-campus.com" class="text-sky-deep font-medium text-sm whitespace-nowrap">business@jingzhe-campus.com</a>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">合作热线</p>
+                <p class="text-sm text-slate-500">400-888-8888（工作日 9:00–18:00）</p>
+              </div>
+            </div>
+            <a href="tel:400-888-8888" class="text-accent font-medium text-sm whitespace-nowrap">拨打电话</a>
+          </li>
+          <li class="flex items-center justify-between p-4 sm:p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="font-medium text-slate-800">合作说明</p>
+                <p class="text-sm text-slate-500">合作流程与权益说明</p>
+              </div>
+            </div>
+            <a href="merchant.html" class="text-accent font-medium text-sm whitespace-nowrap">查看商家合作页</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <div class="mt-8 rounded-2xl bg-white border border-slate-200/60 shadow-sm p-5 sm:p-6">
+      <h2 class="flex items-center gap-2 text-base font-bold text-sky-deep mb-4">
+        <i data-lucide="help-circle" class="w-4 h-4 text-accent"></i>
+        常见问题
+      </h2>
+      <div class="space-y-4">
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">客服一般多久回复？</p>
+          <p class="text-sm text-slate-600 mt-1">工作日内通常在 2 小时内首次回复；非工作日的留言将在下一工作日统一处理。</p>
+        </div>
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">优惠券无法使用怎么办？</p>
+          <p class="text-sm text-slate-600 mt-1">请先确认是否在有效期内、是否满足使用条件。若商家拒绝核销，请保留凭证并联系客服，我们会协助沟通。</p>
+        </div>
+        <div class="border-b border-slate-100 pb-4">
+          <p class="font-medium text-slate-800 text-sm">商家合作想先了解方案可以吗？</p>
+          <p class="text-sm text-slate-600 mt-1">可以。请通过商务邮箱或合作热线说明意向，我们会安排同事与您沟通合作形式与报价。</p>
+        </div>
+        <div>
+          <p class="font-medium text-slate-800 text-sm">能否到现场办理业务？</p>
+          <p class="text-sm text-slate-600 mt-1">办公地址仅支持预约来访，日常咨询与签约均通过线上完成。如有线下需求请先邮件或电话预约。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
